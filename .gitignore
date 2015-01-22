@@ -1,0 +1,21 @@
+# Created by https://www.gitignore.io
+
+### Nette ###
+# Nette - http://nette.org
+# Ignore /log and /temp directories content but commit .htaccess settings
+/log/*
+!/log/.htaccess
+/temp/*
+!/temp/.htaccess
+
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+.nb-gradle/
+
