@@ -21,9 +21,9 @@ import model.WelcomeService;
  * @author owner
  */
 @WebServlet(name = "NameAndGreeter", urlPatterns = {"/greeter"})
-public class NameAndGreeter extends HttpServlet {
+public class NameAndGreeterController extends HttpServlet {
 
-    private static final String RESULT_PAGE = "welcomeResult.jsp";
+    private static final String RESULT_PAGE = "lab4/welcomeResult.jsp";
 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -62,12 +62,8 @@ public class NameAndGreeter extends HttpServlet {
         WelcomeService ws = new WelcomeService();
         // Trim and/or validate input data
         //setting the full name and retrieving the welcome message
-//        ws.setFullName(fn, ln);
         String result2 = ws.getWelcomeMessage(fn, ln);
-//        List result2 = ws.getWelcomeMessage(fn, ln);
-        // Parameters are read only Request object properties, but attributes
-        // are read/write. We can use attributes to store data for use on
-        // another page.
+
         request.setAttribute("welcomeMessage", result2);
 
         // This object lets you forward both the request and response
